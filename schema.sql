@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS weather_dashboard CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE weather_dashboard;
+CREATE TABLE IF NOT EXISTS favorites (
+ location_id BIGINT NOT NULL PRIMARY KEY,
+ name VARCHAR(120) NOT NULL,
+ admin1 VARCHAR(120) NULL,
+ country VARCHAR(120) NULL,
+ country_code CHAR(2) NULL,
+ latitude DECIMAL(9,6) NOT NULL,
+ longitude DECIMAL(9,6) NOT NULL,
+ created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
